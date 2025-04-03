@@ -61,8 +61,29 @@ To handle ties in similarity score, implemented a **secondary sorting based on p
 
 ---
 
-## How to Run
+## How to Run Locally
 
+### Clone the repository
+```bash
+git clone https://github.com/your-username/product-similarity-app.git
+cd product-similarity-app
+```
+
+### Create virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### Run the FastAPI app
+```bash
+uvicorn main:app --reload
+```
+
+Visit  `http://127.0.0.1:8000/docs` to test the interactive Swagger API.
+
+---
 ### Clone & Setup
 
 ```bash
