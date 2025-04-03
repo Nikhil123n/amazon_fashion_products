@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-similarity-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-similarity
+  template:
+    metadata:
+      labels:
+        app: product-similarity
+    spec:
+      containers:
+      - name: product-similarity
+        image: nikhiarethiya/product-similarity-app:latest
+        ports:
+        - containerPort: 8000
