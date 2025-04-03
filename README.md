@@ -18,7 +18,7 @@ Create a microservice that can identify top-N most similar fashion products from
 ## Modeling Journey & Backstory
 
 ### Why weight imputation was critical?
-The `weight` field was severely inconsistent — many entries were in `kg`, `g`, or even strings like `2-pack`, with ~48% missing values and a placeholder value of `999999999`. Rather than dropping such a large portion, we:
+The `weight` field was severely inconsistent — many entries were in `kg`, `g`, or even strings like `2-pack`, with ~48% missing values and a placeholder value of `999999999`. Rather than dropping such a large portion, we do:
 - Preprocessed units (e.g., `2.5kg → 2500g`)
 - Removed placeholder outliers
 - Imputed missing values using **Random Forest Regressor** (because:
@@ -123,11 +123,5 @@ Returns a JSON list of top 5 similar product IDs based on hybrid feature matrix.
 ├── README.md
 └── README_DEPLOYMENT.md     # Deployment documentation (Docker + K8s)
 ```
-
----
-
-## Authors
-
-Built with by a developer obsessed with solving real-world data messiness.
 
 ---
